@@ -1,0 +1,114 @@
+body {
+  font-family: "Rubik", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 250px;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 24px; /* 图标宽度 */
+  height: 24px; /* 图标高度 */
+  margin-right: 10px; /* 图标和标题间距 */
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #8b5cf6;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  height: 40px;
+}
+
+button:hover {
+  background-color: #7c3aed;
+}
+
+footer {
+  width: 100%;
+  text-align: right;
+}
+
+footer a {
+  color: #8b5cf6;  
+}
+
+.test-reminder {
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+.test-reminder:hover{
+    text-decoration: underline;
+}
+
+label{
+  font-weight: 600;
+}
+
+.input-wrapper{
+  display: flex;
+  background-color: #ffffff;
+  border: 1px solid #7b7b93;
+  margin: 10px 0;
+  border-radius: 5px;
+  width: 120px;
+  height: 40px;
+}
+
+.prefix,
+.suffix{
+  position: relative;
+  color: #7b7b93;
+}
+
+.prefix{
+  padding: 15px 0 15px 15px;
+}
+
+.suffix{
+  padding: 15px 15px 15px 0;
+}
+
+.input-wrapper input{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  position: relative;
+  width: 60px;
+  padding: 15px;
+  color: #2c2c51;
+}
+
+.text-list{
+  padding: 10px 0;
+  line-height: 20px;
+  color: #6b7280;
+}

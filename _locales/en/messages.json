@@ -1,0 +1,68 @@
+{
+    "extensionName": {
+        "message": "MoveMate"
+    },
+    "extensionDescription": {
+        "message": "A Chrome extension that reminds you to take breaks and avoid being sedentary."
+    },
+    "setInterval": {
+        "message": "Reminder interval"
+    },
+    "setRestInterval": {
+        "message": "Rest Interval"
+    },
+    "setRestIntervalContent": {
+        "message": "Set rest interval successfully, currently is "
+    },
+    "lastReminder": {
+        "message": "Last reminder"
+    },
+    "nextReminder": {
+        "message": "Next reminder"
+    },
+    "apply": {
+        "message": "Apply"
+    },
+    "setting": {
+        "message": " Setting"
+    },
+    "successApplyMessage": {
+        "message": "Reminder interval set successfully, currently is "
+    },
+    "minute": {
+        "message": "mintues"
+    },
+    "testReminder": {
+        "message": "Test Reminder"
+    },
+    "noReminder": {
+        "message": "No reminder yet"
+    },
+    "calculating": {
+        "message": "Calculating"
+    },
+    "remindSoon": {
+        "message": "Reminder soon"
+    },
+    "minutesLater": {
+        "message": "minutes later"
+    },
+    "testMessage": {
+        "message": "This is a test message."
+    },
+    "messageTitle": {
+        "message": "Sedentary Reminder"
+    },
+    "reminderContentPrefix": {
+        "message": "You have been working continuously for"
+    },
+    "reminderContentSuffix": {
+        "message": "minutes. It's time to take a break!"
+    },
+    "skip": {
+        "message": "Skip rest"
+    },
+    "skipTimes": {
+        "message": "Skipped rest times"
+    }
+}

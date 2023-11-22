@@ -1,0 +1,68 @@
+{
+    "extensionName": {
+        "message": "MoveMate 久坐提醒"
+    },
+    "extensionDescription": {
+        "message": "一个久坐提醒的 Chrome 扩展。"
+    },
+    "setInterval": {
+        "message": "提醒间隔"
+    },
+    "setRestInterval": {
+        "message": "休息间隔"
+    },
+    "setRestIntervalContent": {
+        "message": "设置休息时间成功，当前为"
+    },
+    "lastReminder": {
+        "message": "上次提醒"
+    },
+    "nextReminder": {
+        "message": "下次提醒"
+    },
+    "apply": {
+        "message": "设置"
+    },
+    "setting": {
+        "message": "设置"
+    },
+    "successApplyMessage": {
+        "message": "设置提醒时间成功，当前为间隔为"
+    },
+    "minute": {
+        "message": "分钟"
+    },
+    "testReminder": {
+        "message": "测试通知"
+    },
+    "noReminder": {
+        "message": "未提醒过"
+    },
+    "calculating": {
+        "message": "计算中"
+    },
+    "remindSoon": {
+        "message": "即将提醒"
+    },
+    "minutesLater": {
+        "message": "分钟后"
+    },
+    "testMessage": {
+        "message": "这是一条测试消息"
+    },
+    "messageTitle": {
+        "message": "久坐提醒"
+    },
+    "reminderContentPrefix": {
+        "message": "你已经连续工作"
+    },
+    "reminderContentSuffix": {
+        "message": "分钟了，该休息休息啦！"
+    },
+    "skip": {
+        "message": "跳过本次休息"
+    },
+    "skipTimes": {
+        "message": "已跳过休息次数"
+    }
+}

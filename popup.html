@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>MoveMate</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="icon.png" alt="Logo" class="logo">
+      <h2 data-locale="extensionName">MoveMate</h2>
+    </div>
+
+    <form>
+      <label data-locale="setInterval">Reminder interval</label>
+      <div class="input-container">
+        <div class="input-wrapper">
+          <input type="number" id="interval" min="5" step="5" value="60" />
+          <div class="suffix">Min</div>
+        </div>
+        <button id="reminderButton" data-locale="apply">Apply</button>
+      </div>
+
+      <br>
+
+      <label data-locale="setRestInterval">Rest interval</label>
+      <div class="input-container">
+        <div class="input-wrapper">
+          <input type="number" id="restInterval" min="1" max="30" value="5" />
+          <div class="suffix">Min</div>
+        </div>
+        <button id="restButton" data-locale="apply">Apply</button>
+      </div>
+
+      <div class="text-list">
+        <div><span data-locale="lastReminder">Last Reminder</span>: <span id="lastReminderTime">NaN</span></div>
+        <div><span data-locale="nextReminder">Next Reminder</span>: <span id="nextReminderTime">NaN</span></div>
+        <div><span data-locale="skipTimes">Skip Times</span>: <span id="skipTimes">NaN</span></div>
+      </div>
+    </form>
+
+    <footer>
+      <a class="test-reminder" href="#" id="testReminder" data-locale="testReminder">Test Reminder</a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
