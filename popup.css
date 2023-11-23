@@ -21,6 +21,13 @@ body {
   margin-right: 10px; /* 图标和标题间距 */
 }
 
+.github {
+  width: 16px;
+  height: 16px;
+  text-align: right;
+  margin-left: auto;
+}
+
 form{
   display: flex;
   flex-direction: column;
