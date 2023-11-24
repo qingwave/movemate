@@ -64,5 +64,8 @@
     },
     "skipTimes": {
         "message": "Skipped rest times"
+    },
+    "goToRest": {
+        "message": "Go to rest"
     }
 }

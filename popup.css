@@ -28,7 +28,7 @@ body {
   margin-left: auto;
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
@@ -64,7 +64,7 @@ footer {
 }
 
 footer a {
-  color: #8b5cf6;  
+  color: #8b5cf6;
 }
 
 .test-reminder {
@@ -72,15 +72,15 @@ footer a {
   text-decoration: none;
 }
 
-.test-reminder:hover{
-    text-decoration: underline;
+.test-reminder:hover {
+  text-decoration: underline;
 }
 
-label{
+label {
   font-weight: 600;
 }
 
-.input-wrapper{
+.input-wrapper {
   display: flex;
   background-color: #ffffff;
   border: 1px solid #7b7b93;
@@ -91,20 +91,20 @@ label{
 }
 
 .prefix,
-.suffix{
+.suffix {
   position: relative;
   color: #7b7b93;
 }
 
-.prefix{
+.prefix {
   padding: 15px 0 15px 15px;
 }
 
-.suffix{
+.suffix {
   padding: 15px 15px 15px 0;
 }
 
-.input-wrapper input{
+.input-wrapper input {
   border: none;
   outline: none;
   background-color: transparent;
@@ -114,8 +114,12 @@ label{
   color: #2c2c51;
 }
 
-.text-list{
+.text-list {
   padding: 10px 0;
   line-height: 20px;
   color: #6b7280;
+  background-image: url("static/basketball.gif");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;  
 }

@@ -113,7 +113,7 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
   }
 });
 
-setInterval(function(){
+setInterval(function () {
   chrome.storage.sync.get('nextReminder', function (data) {
     const nextReminder = data.nextReminder;
     setNextReminder(nextReminder);

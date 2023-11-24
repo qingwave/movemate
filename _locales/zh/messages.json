@@ -64,5 +64,8 @@
     },
     "skipTimes": {
         "message": "已跳过休息次数"
+    },
+    "goToRest": {
+        "message": "这就去歇歇"
     }
 }

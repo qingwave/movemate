@@ -39,6 +39,12 @@ chrome.alarms.onAlarm.addListener(function (alarm) {
   }
 });
 
+function getRandomImage() {
+  const imgSize = 10;
+  const randomIndex = Math.floor(Math.random() * imgSize) + 1;
+  return chrome.runtime.getURL(`static/img${randomIndex}.svg`);
+}
+
 function createNotification(interval, skipTimes) {
   let duration = interval;
   if (skipTimes > 0) {
@@ -51,7 +57,9 @@ function createNotification(interval, skipTimes) {
       iconUrl: 'icon.png',
       title: chrome.i18n.getMessage('messageTitle'),
       message: `${chrome.i18n.getMessage('reminderContentPrefix')} ${duration} ${chrome.i18n.getMessage('reminderContentSuffix')}`,
-      buttons: [{ title: chrome.i18n.getMessage('skip'), iconUrl: 'icon.png' }]
+      priority: 2,
+      requireInteraction: true,
+      buttons: [{ title: chrome.i18n.getMessage('skip') }, { title: chrome.i18n.getMessage('goToRest') }],
     });
   });
 }
@@ -84,6 +92,14 @@ chrome.notifications.onButtonClicked.addListener(function (notificationId, butto
       const skipTimes = data.skipTimes || 0;
 
       chrome.storage.sync.set({ 'skipTimes': skipTimes + 1, 'userSetSkip': true });
+    });
+  } else if (notificationId === 'movemate' && buttonIndex === 1) {
+    console.log("user go to rest")
+    chrome.notifications.clear(notificationId)
+
+    chrome.storage.sync.get('restTimes', function (data) {
+      const restTimes = data.restTimes || 0;
+      chrome.storage.sync.set({ 'restTimes': restTimes + 1 });
     });
   }
 });
