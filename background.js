@@ -25,9 +25,10 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
 
 chrome.alarms.onAlarm.addListener(function (alarm) {
   if (alarm.name === 'reminder') {
-    chrome.storage.sync.get(['interval', 'skipTimes'], function (data) {
+chrome.storage.sync.get(['interval', 'skipTimes', 'userSetSkip'], function (data) {
       const interval = data.interval || 60;
       const skipTimes = data.skipTimes || 0;
+      const userSetSkip = data.userSetSkip || false;
 
       console.log('Reminder Trigger');
 
@@ -35,6 +36,8 @@ chrome.alarms.onAlarm.addListener(function (alarm) {
 
       const now = new Date();
       chrome.storage.sync.set({ 'lastReminder': now.toLocaleTimeString() });
+
+      createReminder(interval, userSetSkip)
     });
   }
 });
