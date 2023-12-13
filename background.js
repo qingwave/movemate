@@ -8,8 +8,38 @@ chrome.runtime.onInstalled.addListener(function () {
     });
     createReminder(interval, skipRest = true)
 
-    console.log(`Reminder onIntalled with interval ${interval}`)
+    console.log(`Reminder onInstalled with interval ${interval}`)
   })
+});
+
+chrome.runtime.onStartup.addListener(function () {
+  chrome.storage.sync.get(['interval'], function (data) {
+    const interval = data.interval;
+    if (interval) {
+      createReminder(interval, skipRest = true)
+    }
+    console.log(`Reminder onStartup with interval ${interval}`)
+  })
+})
+
+function checkAndResetReminder() {
+  chrome.alarms.get('reminder', function(alarm) {
+    if (!alarm) {
+      chrome.storage.sync.get(['interval'], function (data) {
+        const interval = data.interval;
+        if (interval) {
+          createReminder(interval, skipRest = true)
+        }
+        console.log('Reminder re-created after computer wake up');
+      })
+    }
+  });
+}
+
+chrome.windows.onFocusChanged.addListener(function(windowId) {
+  if (windowId != chrome.windows.WINDOW_ID_NONE) {
+    checkAndResetReminder();
+  }
 });
 
 chrome.storage.onChanged.addListener(function (changes, namespace) {
@@ -28,7 +58,6 @@ chrome.alarms.onAlarm.addListener(function (alarm) {
 chrome.storage.sync.get(['interval', 'skipTimes', 'userSetSkip'], function (data) {
       const interval = data.interval || 60;
       const skipTimes = data.skipTimes || 0;
-      const userSetSkip = data.userSetSkip || false;
 
       console.log('Reminder Trigger');
 
@@ -37,7 +66,8 @@ chrome.storage.sync.get(['interval', 'skipTimes', 'userSetSkip'], function (data
       const now = new Date();
       chrome.storage.sync.set({ 'lastReminder': now.toLocaleTimeString() });
 
-      createReminder(interval, userSetSkip)
+      // const userSetSkip = data.userSetSkip || false;
+      // createReminder(interval, userSetSkip)
     });
   }
 });
