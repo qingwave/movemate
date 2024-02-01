@@ -15,8 +15,9 @@
 5. 选择项目文件夹并确认加载。
 
 > 注意，如果通知没有生效且没有任何报错，参考以下解决办法
-1. 在Chrome浏览器中访问地址：`chrome://flags`
-2. 搜索栏中搜索：`notifications`，找到`Enable system notifications`选项，将其选项值改为`Disabled`，重启浏览器，问题解决
+1. 在Chrome浏览器中访问地址：[chrome://flags](chrome://flags)
+2. 搜索栏中搜索：`notifications`，找到`Enable system notifications`选项，将其选项值改为`Disabled`，重启浏览器，问题解决（如果**chrome >= 121**, 需要先enable `Temporarily unexpire M120 flags` 再重启）
+
 
 ### 设置提醒间隔时间
 
